@@ -1,52 +1,76 @@
-.grid{
+.grid {
     display: flex;
     justify-content: space-between;
 }
-.grid_esquerda{
-    color: white;
+
+.grid_esquerda {
+    color: grey;
     display: flex;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
-    border: 2px red solid;
-}
-.grid_esquerda h1{
- padding-bottom: 20px;
- font-size: 30px;
 }
 
-.grid_direita{
+.grid_esquerda h1 {
+    padding-bottom: 20px;
+    font-size: 60px;
+}
+
+.grid_esquerda h2 {
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+.grid_direita {
     display: flex;
     justify-content: center;
     color: white;
     flex-direction: column;
-    height: 100vh;
-    border: 2px blue solid;
-}
-
-.formulario{
-    display: flex;
-    flex-direction: column;
-}
-.formulario input{
-    text-align: left;
-    width:80%;
-    color: black;
-    background-color: #F3EBEB;
-    padding: 10px;
+    height: 60vh;
+    background-color: white;
+    margin-top: 150px;
     border-radius: 10px;
+    width: 700px;
+
 }
-.formulario h1{
-    color: white;
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.formulario label {
+    background-color: white;
+    color: black;
+    padding-top: 10px;
+}
+
+.formulario input {
+    text-align: left;
+    width: 80%;
+    color: black;
+    background-color: white;
+    border: 1px grey solid;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.formulario h1 {
+    color: #323238;
     padding-bottom: 10px;
+    background-color: white;
 }
-.formulario h2{
+
+.formulario h2 {
     color: white;
 }
 
-.formulario button{
+.formulario button {
     margin: 0.5rem;
-    background-color: black; 
+    background-color: #633BBC;
     border: none;
     color: white;
     padding: 12px 32px;
@@ -57,9 +81,75 @@
     width: 40%;
     border-radius: 10px;
     cursor: pointer;
-  
+
 }
-.lista_sug{
+
+.lista_sug {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    padding-top: 10px;
+
 }
+
+.sugestao {
+    padding-left: 20px;
+    display: none;
+    
+}
+
+.sugestao_visivel {
+    display: block;
+    color: black;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.lista_sug ul li {
+    color: black;
+    background-color: white;
+    font-size: 200px;
+}
+
+.sugestao h1 {
+    color: black;
+}
+
+.desenho{
+    background-color: #633BBC;
+    width: 500px;
+    height: 70vh;
+    margin-top: 100px;
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.borda_form{
+    background-color: white;
+    width: 200px;
+    height: 55vh;
+    margin-top: 170px;
+    position: absolute;
+    right: 200px;
+    z-index: -1;
+    border-radius: 10px;
+    opacity:0.3
+
+}
+.borda_form_last{
+    background-color: white;
+    width: 200px;
+    height: 50vh;
+    margin-top: 190px;
+    position: absolute;
+    right: 170px;
+    z-index: -1;
+    border-radius: 10px;
+    opacity:0.1
+
+}
+
