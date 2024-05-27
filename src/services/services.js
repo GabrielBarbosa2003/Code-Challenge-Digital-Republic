@@ -27,11 +27,42 @@
           throw new Error('A altura da parede deve ser no mínimo 30 cm maior que a altura da porta (2.2 metros).');
      }
 
-     return true;
+     return {areaParede, areaTotalPortasJanelas};
 
 
 
 
 }
 
-export { verificaTamanhoParede, calculaPortaEJanela}
+function totalDeLatas({areaTotalParedes,areaTotalPortasJanelas}){
+     const areaPintavel = areaTotalParedes - areaTotalPortasJanelas;
+     const litrosDeTinta = areaPintavel / 5; // 1 litro de tinta para cada 5 metros quadrados
+     return litrosDeTinta
+}
+
+function sugerirCompras(litrosNecessarios) {
+     const tamanhosLatas = [
+       { tamanho: 18, descricao: '18 L' },
+       { tamanho: 3.6, descricao: '3,6 L' },
+       { tamanho: 2.5, descricao: '2,5 L' },
+       { tamanho: 0.5, descricao: '0,5 L' }
+     ];
+   
+     // Inicializa as quantidades de latas necessárias
+     const quantidadesLatas = {};
+     for (const lata of tamanhosLatas) {
+       quantidadesLatas[lata.descricao] = 0;
+     }
+   
+     // Calcula as quantidades de latas necessárias, priorizando as maiores
+     for (const lata of tamanhosLatas) {
+       while (litrosNecessarios >= lata.tamanho) {
+         quantidadesLatas[lata.descricao]++;
+         litrosNecessarios -= lata.tamanho;
+       }
+     }
+   
+      return quantidadesLatas;
+   }
+
+export { verificaTamanhoParede, calculaPortaEJanela, totalDeLatas, sugerirCompras}
