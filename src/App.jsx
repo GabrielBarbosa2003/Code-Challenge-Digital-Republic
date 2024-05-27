@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import './App.css'
 import './grid.css'
+import { useState } from 'react';
 import { verificaTamanhoParede, calculaPortaEJanela, totalDeLatas, sugerirCompras } from './services/services';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     janelas: '',
     portas: ''
   });
-  const [sugertaoLatas, setSugertaoLatas] = useState({
+  const [sugestaoLatas, setSugestaoLatas] = useState({
     l18: '',
     l36: '',
     l25: '',
@@ -53,11 +53,12 @@ function App() {
       portas: ''
     })
     areaTotalParedes = areaTotalParedes + areaParede;
+    
     if (parede == 4) {
       totalDeLatas({ areaTotalParedes, areaTotalPortasJanelas });
       var latas = sugerirCompras(areaTotalParedes);
       var { '18 L': lata18L, '3,6 L': lata3_6L, '2,5 L': lata2_5L, '0,5 L': lata0_5L } = latas;
-      setSugertaoLatas(
+      setSugestaoLatas(
         {
           l18: lata18L,
           l36: lata3_6L,
@@ -110,16 +111,16 @@ function App() {
                 <ul className='lista_sug'>
                   Para pintar o comodo, sugerimos:
                   <l1>
-                    18L:{sugertaoLatas.l18}
+                    18L:{sugestaoLatas.l18}
                   </l1>
                   <l1>
-                    3,6L:{sugertaoLatas.l36}
+                    3,6L:{sugestaoLatas.l36}
                   </l1>
                   <l1>
-                    2,5L: {sugertaoLatas.l25}
+                    2,5L: {sugestaoLatas.l25}
                   </l1>
                   <l1>
-                    0,5: {sugertaoLatas.l05}
+                    0,5: {sugestaoLatas.l05}
                   </l1>
                 </ul>
 

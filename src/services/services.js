@@ -1,5 +1,4 @@
  function verificaTamanhoParede({ altura, largura }) {
-
      // regra de negocios 1: Nenhuma parede pode ter menos de 1 metro quadrado nem mais de 50 metros quadrados, mas podem possuir alturas e larguras diferentes
      if (altura < 1 || largura < 1) {
           throw new Error("O valor deve ser maior do que 1");
