@@ -1,0 +1,61 @@
+.grid{
+    display: flex;
+    justify-content: space-between;
+}
+.grid_esquerda{
+    color: white;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px red solid;
+}
+.grid_esquerda h1{
+ padding-bottom: 20px;
+ font-size: 30px;
+}
+
+.grid_direita{
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    height: 100vh;
+    border: 2px blue solid;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+.formulario input{
+    text-align: left;
+    width:80%;
+    color: black;
+    background-color: #F3EBEB;
+    padding: 10px;
+    border-radius: 10px;
+}
+.formulario h1{
+    color: white;
+    padding-bottom: 10px;
+}
+.formulario h2{
+    color: white;
+}
+
+.formulario button{
+    margin: 0.5rem;
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    transition: 0.5s ease;
+    width: 40%;
+    border-radius: 10px;
+    cursor: pointer;
+  
+}
